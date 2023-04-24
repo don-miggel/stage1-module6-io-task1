@@ -44,7 +44,7 @@ public class FileReader {
         while (currentStr.indexOf(sep) != -1){
             values[arrCounter++] = currentStr.substring(currentStr.indexOf(':')+1, currentStr.indexOf('\n')).trim();
             currentStr= currentStr.substring(currentStr.indexOf('\n')+1);
-        };
+        }
         return values;
     }
 
