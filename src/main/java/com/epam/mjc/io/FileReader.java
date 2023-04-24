@@ -48,9 +48,4 @@ public class FileReader {
         return values;
     }
 
-    public static void main(String[] args) throws IOException {
-        FileReader fr = new FileReader();
-        File fl = new File("src/main/java/com/epam/mjc/io/pr.txt");
- //       System.out.println(fr.getDataFromFile(fl));
-    }
 }
