@@ -9,21 +9,21 @@ public class FileReader {
 
     public Profile getDataFromFile(File file) {
 
-        String str = "";
+        StringBuilder str = new StringBuilder("");
         try (java.io.FileReader fin = new java.io.FileReader(file.getPath())){
             int i;
 
             do{
                 i = fin.read();
                 if(i != -1) {
-                    str += (char)i;
+                    str.append((char) i);
                 }
 
             }while ( i != -1);
         }catch (IOException e) {
             e.printStackTrace();
         }
-        String[] values = parseString(str, ':');
+        String[] values = parseString(String.valueOf(str), ':');
 
         return new Profile(values[0], Integer.parseInt(values[1]), values[2], Long.parseLong(values[3]));
     }
